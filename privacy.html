@@ -28,7 +28,7 @@
 <p>This data is not sent to a server. Deleting the app removes it. The game has no account, login, chat, user-generated content or analytics SDK.</p>
 <h3>Purchases</h3>
 <p>Optional developer tips are processed by Apple In-App Purchase. The developer does not receive your name, email, card details or Apple ID. The app may retain the transaction identifier and app receipt on-device so a purchase can be restored or verified. Apple's privacy policy applies to payment processing.</p>
-<p>The current build does not operate a live global supporter board. If one is enabled in a future build, only an anonymous supporter token, preset display name, non-spendable rank points and a public/private flag would be sent after Apple receipt verification. The game will never publish an Apple ID, email, device ID or payment details.</p>
+<p>If you choose to make your support public, the game sends only an anonymous supporter token, a preset display name, non-spendable rank points and a public/private flag to the verified supporter backend at <code>vsoho.work/api/drop-swerve</code> after Apple receipt verification. The backend stores the transaction ID, product ID, points, Apple environment (Production/Sandbox), timestamps and the public display name. It does not store your Apple ID, email, card details, device ID or raw receipt. The public top endpoint returns only opt-in display names and points.</p>
 <h3>Advertising and tracking</h3>
 <p>The current build uses a local mock ad surface, clearly labelled as a development test, and collects no advertising data. If a real advertising SDK is enabled in a future build, the required consent flow (including Google UMP in the EEA/UK/Switzerland and Apple ATT only if cross-app tracking is actually used) will be presented first, and this policy plus App Store privacy answers will be updated.</p>
 <h3>Game Center</h3>
@@ -38,11 +38,11 @@
 <h3>Children</h3>
 <p>The game is intended for a general audience and does not knowingly collect personal information from children. There are no accounts, chat rooms or user-generated content.</p>
 <h3>Your choices and deletion</h3>
-<p>You can delete all local game data by deleting the app. For a privacy request, email <a href="mailto:chinagdh@163.com">chinagdh@163.com</a>. If a global supporter row is ever enabled, the support page will provide a deletion control.</p>
+<p>You can delete all local game data by deleting the app. For a privacy request, email <a href="mailto:chinagdh@163.com">chinagdh@163.com</a>. If you have a public supporter row, contact support to hide or delete it.</p>
 
 <h2 id="zh">中文</h2>
 <p>Drop &amp; Swerve 是单人游戏。当前版本仅在设备本地保存语言、八小时时钟、结局/成就、最佳记录、开发者支持预览和模拟广告状态，不会上传服务器；删除 App 即可清除。游戏没有账号、登录、聊天、用户生成内容或统计 SDK。</p>
-<p>可选的“支持开发者”由 Apple 内购处理。开发者不会获得你的姓名、邮箱、银行卡或 Apple ID；交易号和应用收据可能仅保存在设备上，用于恢复或验证。当前版本不运营全球支持者榜。如未来启用，只会在 Apple 收据验证后发送匿名标识、预设昵称、不可消费的排名积分和公开/私密开关，绝不发布 Apple ID、邮箱、设备 ID 或支付信息。</p>
+<p>可选的“支持开发者”由 Apple 内购处理。开发者不会获得你的姓名、邮箱、银行卡或 Apple ID；交易号和应用收据可能仅保存在设备上，用于恢复或验证。如果你选择公开支持记录，游戏会在 Apple 收据验证后，仅向 <code>vsoho.work/api/drop-swerve</code> 的验证后端发送匿名标识、预设昵称、不可消费的排名积分和公开/私密开关。后端保存交易号、商品号、积分、Apple 环境、时间和公开昵称，不保存 Apple ID、邮箱、银行卡、设备 ID 或原始收据。公开榜单只返回主动公开的昵称和积分。</p>
 <p>当前版本使用明确标注的本地模拟广告位，不收集广告数据。如未来启用真实广告 SDK，会先提供适用的同意流程（欧洲经济区/英国/瑞士使用 Google UMP；只有实际进行跨 App 追踪时才请求 Apple ATT），并在提交前更新本政策与 App 隐私答案。Game Center 可选，Apple 处理身份，未登录也能完整游玩。</p>
 <p>本政策页面由 GitHub Pages 托管；GitHub 可能按其隐私声明处理标准网页请求信息。游戏不会把游戏数据发送给 GitHub。删除 App 即可清除本地数据。隐私联系：<a href="mailto:chinagdh@163.com">chinagdh@163.com</a>。</p>
 
