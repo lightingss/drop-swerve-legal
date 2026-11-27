@@ -44,13 +44,13 @@
 <h3>Friends, invitations and revive tickets</h3>
 <p>The Friends &amp; Rewards panel is optional. It is not a social login and does not ask for your phone number, email address, contact list or social-media account. On first use, the game creates one anonymous player identity on our server. The server stores an invite code, your friendships, who invited whom, whether a new player completed their first valid delivery, daily friend-challenge state, and an immutable ledger of revive-ticket grants, spends and administrative reversals. The same anonymous identity is shared between iOS and Android.</p>
 <p>An invitation link contains an invite code and a signature; it contains no device identifier, account token, nickname, exact location or contact information. A new player who accepts an invitation and completes their first valid delivery gives the inviter 3 in-game revive tickets and receives 1; this one-time reward can be earned for any number of genuine new players, subject to anti-abuse review. Daily friend challenges give up to 3 inviter tickets and 1 invitee ticket per server day, and the same pair of friends can earn at most once per day. Revive tickets are not money, have no cash value and cannot be exchanged, transferred, traded or sold; they are used only to resume a run. Suspected abuse is retained as a risk flag for manual review; we do not apply automatic punishment based only on shared IP addresses, invitation count or speed.</p>
-<p>The panel has a “Delete my data” action. After confirmation it deletes your growth data, friendships, challenge records, delivery events and ledger, removes your leaderboard account, deletes the optional public supporter-board row and its verified tip records, and clears the local credential. A one-way device hash and administrative audit records may be retained for 24 months for fraud prevention and are then purged; no nickname, invite code, friendship, reward history, supporter row or score remains. The Remove Ads entitlement is not revoked.</p>
+<p>There is no in-app deletion action. To request deletion of the server-side player data described above, email <a href="mailto:chinagdh@163.com">chinagdh@163.com</a> with your invite code. We delete your growth data, friendships, challenge records, delivery events and ledger, remove your leaderboard account and revoke its server-issued token, delete the optional public supporter-board row and its verified tip records, and remove the associated server data. A one-way device hash and administrative audit records may be retained for 24 months for fraud prevention and are then purged; no nickname, invite code, friendship, reward history, supporter row or score remains. The Remove Ads entitlement is not revoked. You can clear local app data by deleting the app.</p>
 
 <h3>Endless leaderboard</h3>
-<p>The endless leaderboard is optional and does not require an account or social login. On first use, the game creates an anonymous leaderboard account from a SHA-256 hash of the device identifier (IDFV on iOS), the app identifier and the platform. The server stores the hash, a server-issued token, a server-generated anonymous display name, your best endless score (deliveries, gates and distance), your country code and the platform. The raw device identifier is not sent or stored. Custom display-name editing is disabled in version 1.0; the generated name is display-only. You can delete your leaderboard score from the service. This leaderboard is separate from Game Center and does not require an Apple ID.</p>
+<p>The endless leaderboard is optional and does not require an account or social login. On first use, the game creates an anonymous leaderboard account from a SHA-256 hash of the device identifier (IDFV on iOS), the app identifier and the platform. The server stores the hash, a server-issued token, a server-generated anonymous display name, your best endless score (deliveries, gates and distance), your country code and the platform. The raw device identifier is not sent or stored. Custom display-name editing is disabled in version 1.0; the generated name is display-only. You can request deletion of your leaderboard score and account by emailing <a href="mailto:chinagdh@163.com">chinagdh@163.com</a>. This leaderboard is separate from Game Center and does not require an Apple ID.</p>
 
 <h3>Game Center</h3>
-<p>On iOS, the game can show an optional Game Center leaderboard for the same endless best score. Game Center sign-in is optional and never required to play. If you sign in, Apple’s GameKit service authenticates your Game Center account and receives the score you submit. The game does not access, store or send your Game Center profile data (such as player ID, display name, email, contacts or Apple ID); it only asks GameKit to authenticate and report the best score. Apple associates the score with your Game Center account and processes it under Apple’s privacy policy. You can manage Game Center in iOS Settings. The game’s own “Delete my data” action does not delete data held by Apple.</p>
+<p>On iOS, the game can show an optional Game Center leaderboard for the same endless best score. Game Center sign-in is optional and never required to play. If you sign in, Apple’s GameKit service authenticates your Game Center account and receives the score you submit. The game does not access, store or send your Game Center profile data (such as player ID, display name, email, contacts or Apple ID); it only asks GameKit to authenticate and report the best score. Apple associates the score with your Game Center account and processes it under Apple’s privacy policy. You can manage Game Center in iOS Settings. Deleting the game’s own data does not delete data held by Apple.</p>
 
 <h3>Hosting of this policy</h3>
 <p>This policy is hosted by GitHub Pages. GitHub may process standard web-request information such as IP address and user agent under GitHub’s own privacy statement. The game does not send your game data to GitHub.</p>
@@ -64,7 +64,7 @@
 <li>You can change tracking permission in iOS Settings → Privacy &amp; Security → Tracking.</li>
 <li>You can change the in-game language, sound and haptics at any time.</li>
 <li>You can use the Privacy Options entry when Google UMP requires one.</li>
-<li>You can delete your server-side player data from “Friends &amp; Rewards → Delete my data”. This removes friendships, invitation attribution, daily challenge records, delivery events, the revive-ticket ledger, the leaderboard account and the optional supporter-board row and tip records; a one-way device hash may be retained for 24 months for fraud prevention. The Remove Ads entitlement is kept.</li>
+<li>You can request deletion of your server-side player data by emailing <a href="mailto:chinagdh@163.com">chinagdh@163.com</a> with your invite code. This removes friendships, invitation attribution, daily challenge records, delivery events, the revive-ticket ledger, the leaderboard account and the optional supporter-board row and tip records; a one-way device hash may be retained for 24 months for fraud prevention. The Remove Ads entitlement is kept.</li>
 <li>You can clear local data by deleting the app.</li>
 <li>For privacy questions, contact <a href="mailto:chinagdh@163.com">chinagdh@163.com</a>.</li>
 </ul>
@@ -92,13 +92,13 @@
 <h3>好友、邀请与复活券</h3>
 <p>“好友与奖励”为可选功能，不是社交登录，不要求手机号、邮箱、通讯录或社交账号。首次使用时，游戏会在我们的服务器上创建一个匿名玩家身份，并保存邀请码、好友关系、谁邀请了谁、新玩家是否完成首次有效送达、每日好友挑战状态，以及复活券发放、消耗与管理回滚的不可变流水。同一匿名身份在 iOS 与 Android 间共用。</p>
 <p>邀请链接只包含邀请码与签名，不包含设备标识、账号令牌、昵称、精确位置或联系方式。新玩家接受邀请并完成首次有效送达后，邀请人获得 3 张游戏内复活券，新玩家获得 1 张；该一次性奖励可对任意数量的真实新玩家生效，但会接受反作弊审查。每日好友挑战每个服务器日最多发放邀请人 3 张、被邀请人 1 张，同一对好友每天最多获得一次。复活券不是货币，无现金价值，不可兑换、转让、交易或出售，仅用于继续对局。疑似滥用会作为风险标记保留以供人工审查；我们不会仅凭共享 IP、邀请数量或速度自动处罚。</p>
-<p>面板内提供“删除我的数据”。确认后将删除你的成长数据、好友关系、挑战记录、送达事件与流水，移除排行榜账号，删除可选的公开支持者榜记录及其已验证的支持记录，并清除本地凭证。单向设备哈希与管理审计记录可能为反欺诈保留 24 个月，随后清除；不会保留昵称、邀请码、好友关系、奖励历史、支持者记录或分数。“移除广告”权益不会被撤销。</p>
+<p>面板内不再提供应用内删除操作。如需删除上述服务器侧玩家数据，请发送邮件至 <a href="mailto:chinagdh@163.com">chinagdh@163.com</a> 并附上邀请码。我们会删除你的成长数据、好友关系、挑战记录、送达事件与流水，移除排行榜账号并撤销服务器签发的令牌，删除可选的公开支持者榜记录及其已验证的支持记录，并移除相关服务器数据。单向设备哈希与管理审计记录可能为反欺诈保留 24 个月，随后清除；不会保留昵称、邀请码、好友关系、奖励历史、支持者记录或分数。“移除广告”权益不会被撤销。删除 App 可清除本机数据。</p>
 
 <h3>无尽排行榜</h3>
-<p>无尽排行榜为可选功能，不需要账号或社交登录。首次使用时，游戏以设备标识（iOS 为 IDFV）、应用标识与平台的 SHA-256 哈希创建匿名排行榜账号。服务器保存该哈希、服务器签发的令牌、服务器生成的匿名显示名、你的无尽最佳成绩（送达数、门数与距离）、国家/地区代码与平台。原始设备标识不会发送或保存。1.0 版本不开放自定义昵称，显示名仅用于展示。你可以在服务内删除自己的排行榜成绩。该排行榜与 Game Center 相互独立，不需要 Apple ID。</p>
+<p>无尽排行榜为可选功能，不需要账号或社交登录。首次使用时，游戏以设备标识（iOS 为 IDFV）、应用标识与平台的 SHA-256 哈希创建匿名排行榜账号。服务器保存该哈希、服务器签发的令牌、服务器生成的匿名显示名、你的无尽最佳成绩（送达数、门数与距离）、国家/地区代码与平台。原始设备标识不会发送或保存。1.0 版本不开放自定义昵称，显示名仅用于展示。你可以发送邮件至 <a href="mailto:chinagdh@163.com">chinagdh@163.com</a> 请求删除排行榜成绩与账号。该排行榜与 Game Center 相互独立，不需要 Apple ID。</p>
 
 <h3>Game Center</h3>
-<p>在 iOS 上，游戏可显示可选的 Game Center 无尽排行榜。Game Center 登录完全可选，不登录也能完整游玩。登录后，Apple 的 GameKit 服务会认证你的 Game Center 账号并接收你提交的成绩。游戏不会访问、保存或发送你的 Game Center 个人资料（例如玩家 ID、显示名、邮箱、通讯录或 Apple ID）；它只请求 GameKit 完成认证并上报最佳成绩。Apple 会将成绩与你的 Game Center 账号关联，并按 Apple 的隐私政策处理。你可以在 iOS 设置中管理 Game Center。游戏内的“删除我的数据”不会删除 Apple 持有的数据。</p>
+<p>在 iOS 上，游戏可显示可选的 Game Center 无尽排行榜。Game Center 登录完全可选，不登录也能完整游玩。登录后，Apple 的 GameKit 服务会认证你的 Game Center 账号并接收你提交的成绩。游戏不会访问、保存或发送你的 Game Center 个人资料（例如玩家 ID、显示名、邮箱、通讯录或 Apple ID）；它只请求 GameKit 完成认证并上报最佳成绩。Apple 会将成绩与你的 Game Center 账号关联，并按 Apple 的隐私政策处理。你可以在 iOS 设置中管理 Game Center。删除游戏自身的数据不会删除 Apple 持有的数据。</p>
 
 <h3>本政策的托管</h3>
 <p>本政策由 GitHub Pages 托管。GitHub 可能按其隐私声明处理标准网页请求信息（如 IP 地址与浏览器标识）。游戏不会向 GitHub 发送你的游戏数据。</p>
@@ -112,7 +112,7 @@
 <li>你可以在 iOS 设置 → 隐私与安全性 → 跟踪 中修改追踪权限。</li>
 <li>你可以随时修改语言、音效与震动。</li>
 <li>在 Google UMP 要求时，你可以使用“隐私选项”。</li>
-<li>你可以在“好友与奖励 → 删除我的数据”删除服务器侧玩家数据：好友关系、邀请归因、每日挑战记录、送达事件、复活券流水、排行榜账号以及可选的支持者榜记录与支持记录；单向设备哈希可能为反欺诈保留 24 个月。“移除广告”权益会保留。</li>
+<li>你可以发送邮件至 <a href="mailto:chinagdh@163.com">chinagdh@163.com</a> 并附上邀请码，请求删除服务器侧玩家数据：好友关系、邀请归因、每日挑战记录、送达事件、复活券流水、排行榜账号以及可选的支持者榜记录与支持记录；单向设备哈希可能为反欺诈保留 24 个月。“移除广告”权益会保留。</li>
 <li>删除 App 可清除本地数据。</li>
 <li>隐私问题请联系 <a href="mailto:chinagdh@163.com">chinagdh@163.com</a>。</li>
 </ul>
@@ -140,13 +140,13 @@
 <h3>好友、邀請與復活券</h3>
 <p>「好友與獎勵」為可選功能，不是社群登入，不要求手機號碼、電子郵件、通訊錄或社群帳號。首次使用時，遊戲會在我們的伺服器建立一個匿名玩家身分，並保存邀請碼、好友關係、誰邀請了誰、新玩家是否完成首次有效送達、每日好友挑戰狀態，以及復活券發放、消耗與管理回滾的不可變流水。同一匿名身分在 iOS 與 Android 間共用。</p>
 <p>邀請連結只包含邀請碼與簽章，不包含裝置識別碼、帳號權杖、暱稱、精確位置或聯絡方式。新玩家接受邀請並完成首次有效送達後，邀請人獲得 3 張遊戲內復活券，新玩家獲得 1 張；該一次性獎勵可對任意數量的真實新玩家生效，但會接受反作弊審查。每日好友挑戰每個伺服器日最多發放邀請人 3 張、被邀請人 1 張，同一對好友每天最多獲得一次。復活券不是貨幣，無現金價值，不可兌換、轉讓、交易或出售，僅用於繼續對局。疑似濫用會作為風險標記保留以供人工審查；我們不會僅憑共用 IP、邀請數量或速度自動處罰。</p>
-<p>面板內提供「刪除我的資料」。確認後將刪除你的成長資料、好友關係、挑戰紀錄、送達事件與流水，移除排行榜帳號，刪除可選的公開支持者榜紀錄及其已驗證的支持紀錄，並清除本機憑證。單向裝置雜湊與管理審計紀錄可能為反詐欺保留 24 個月，隨後清除；不會保留暱稱、邀請碼、好友關係、獎勵歷史、支持者紀錄或分數。「移除廣告」權益不會被撤銷。</p>
+<p>面板內不再提供應用程式內刪除操作。如需刪除上述伺服器端玩家資料，請寄送電子郵件至 <a href="mailto:chinagdh@163.com">chinagdh@163.com</a> 並附上邀請碼。我們會刪除你的成長資料、好友關係、挑戰紀錄、送達事件與流水，移除排行榜帳號並撤銷伺服器簽發的權杖，刪除可選的公開支持者榜紀錄及其已驗證的支持紀錄，並移除相關伺服器資料。單向裝置雜湊與管理審計紀錄可能為反詐欺保留 24 個月，隨後清除；不會保留暱稱、邀請碼、好友關係、獎勵歷史、支持者紀錄或分數。「移除廣告」權益不會被撤銷。刪除 App 可清除本機資料。</p>
 
 <h3>無盡排行榜</h3>
-<p>無盡排行榜為可選功能，不需要帳號或社群登入。首次使用時，遊戲以裝置識別碼（iOS 為 IDFV）、應用程式識別碼與平台的 SHA-256 雜湊建立匿名排行榜帳號。伺服器保存該雜湊、伺服器簽發的權杖、伺服器產生的匿名顯示名稱、你的無盡最佳成績（送達數、門數與距離）、國家/地區代碼與平台。原始裝置識別碼不會傳送或保存。1.0 版本不開放自訂暱稱，顯示名稱僅供展示。你可以在服務內刪除自己的排行榜成績。該排行榜與 Game Center 相互獨立，不需要 Apple ID。</p>
+<p>無盡排行榜為可選功能，不需要帳號或社群登入。首次使用時，遊戲以裝置識別碼（iOS 為 IDFV）、應用程式識別碼與平台的 SHA-256 雜湊建立匿名排行榜帳號。伺服器保存該雜湊、伺服器簽發的權杖、伺服器產生的匿名顯示名稱、你的無盡最佳成績（送達數、門數與距離）、國家/地區代碼與平台。原始裝置識別碼不會傳送或保存。1.0 版本不開放自訂暱稱，顯示名稱僅供展示。你可以寄送電子郵件至 <a href="mailto:chinagdh@163.com">chinagdh@163.com</a> 請求刪除排行榜成績與帳號。該排行榜與 Game Center 相互獨立，不需要 Apple ID。</p>
 
 <h3>Game Center</h3>
-<p>在 iOS 上，遊戲可顯示可選的 Game Center 無盡排行榜。Game Center 登入完全可選，不登入也能完整遊玩。登入後，Apple 的 GameKit 服務會驗證你的 Game Center 帳號並接收你提交的成績。遊戲不會存取、保存或傳送你的 Game Center 個人資料（例如玩家 ID、顯示名稱、電子郵件、通訊錄或 Apple ID）；它只請 GameKit 完成驗證並回報最佳成績。Apple 會將成績與你的 Game Center 帳號關聯，並依 Apple 的隱私權政策處理。你可以在 iOS 設定中管理 Game Center。遊戲內的「刪除我的資料」不會刪除 Apple 持有的資料。</p>
+<p>在 iOS 上，遊戲可顯示可選的 Game Center 無盡排行榜。Game Center 登入完全可選，不登入也能完整遊玩。登入後，Apple 的 GameKit 服務會驗證你的 Game Center 帳號並接收你提交的成績。遊戲不會存取、保存或傳送你的 Game Center 個人資料（例如玩家 ID、顯示名稱、電子郵件、通訊錄或 Apple ID）；它只請 GameKit 完成驗證並回報最佳成績。Apple 會將成績與你的 Game Center 帳號關聯，並依 Apple 的隱私權政策處理。你可以在 iOS 設定中管理 Game Center。刪除遊戲自身的資料不會刪除 Apple 持有的資料。</p>
 
 <h3>本政策的託管</h3>
 <p>本政策由 GitHub Pages 託管。GitHub 可能依其隱私權聲明處理標準網頁請求資訊（例如 IP 位址與瀏覽器識別碼）。遊戲不會向 GitHub 傳送你的遊戲資料。</p>
@@ -160,7 +160,7 @@
 <li>你可以在 iOS 設定 → 隱私權與安全性 → 追蹤 中修改追蹤權限。</li>
 <li>你可以隨時修改語言、音效與震動。</li>
 <li>在 Google UMP 要求時，你可以使用「隱私選項」。</li>
-<li>你可以在「好友與獎勵 → 刪除我的資料」刪除伺服器端玩家資料：好友關係、邀請歸因、每日挑戰紀錄、送達事件、復活券流水、排行榜帳號以及可選的支持者榜紀錄與支持紀錄；單向裝置雜湊可能為反詐欺保留 24 個月。「移除廣告」權益會保留。</li>
+<li>你可以寄送電子郵件至 <a href="mailto:chinagdh@163.com">chinagdh@163.com</a> 並附上邀請碼，請求刪除伺服器端玩家資料：好友關係、邀請歸因、每日挑戰紀錄、送達事件、復活券流水、排行榜帳號以及可選的支持者榜紀錄與支持紀錄；單向裝置雜湊可能為反詐欺保留 24 個月。「移除廣告」權益會保留。</li>
 <li>刪除 App 可清除本機資料。</li>
 <li>隱私問題請聯絡 <a href="mailto:chinagdh@163.com">chinagdh@163.com</a>。</li>
 </ul>
@@ -188,13 +188,13 @@
 <h3>フレンド、招待、復活チケット</h3>
 <p>「フレンドと報酬」は任意機能です。ソーシャルログインではなく、電話番号、メールアドレス、連絡先、SNS アカウントを求めません。初回利用時に、サーバー上に匿名のプレイヤー ID を 1 つ作成し、招待コード、フレンド関係、誰が誰を招待したか、新規プレイヤーが最初の有効な配達を完了したか、毎日のフレンド挑戦の状態、復活チケットの付与・消費・管理者による取消の不変台帳を保存します。同じ匿名 ID は iOS と Android で共有されます。</p>
 <p>招待リンクには招待コードと署名のみが含まれ、端末 ID、アカウントトークン、ニックネーム、正確な位置、連絡先は含まれません。新規プレイヤーが招待を承諾し最初の有効な配達を完了すると、招待者にゲーム内復活チケット 3 枚、新規プレイヤーに 1 枚が付与されます。この一度限りの報酬は、不正防止の確認を条件に、任意の人数の実在新規プレイヤーに対して成立します。毎日のフレンド挑戦はサーバー日ごとに招待者最大 3 枚、被招待者 1 枚で、同じフレンド同士は 1 日 1 回までです。復活チケットは通貨ではなく、現金価値もなく、交換・譲渡・取引・販売はできません。プレイの再開にのみ使用します。不正の疑いがある場合は手動確認用のリスクフラグとして保持し、共有 IP、招待数、速度のみによる自動処罰は行いません。</p>
-<p>パネルには「データを削除」があります。確認後、成長データ、フレンド関係、挑戦記録、配達イベント、台帳を削除し、ランキングアカウントを削除し、任意の公開サポーターボード行と検証済みチップ記録を削除し、ローカル認証情報を消去します。不正防止のため、一方向の端末ハッシュと管理監査記録を 24 か月保持し、その後削除する場合があります。ニックネーム、招待コード、フレンド関係、報酬履歴、サポーター行、スコアは残りません。「広告を削除」の権利は取り消されません。</p>
+<p>アプリ内の削除操作はありません。上記のサーバー側プレイヤーデータの削除を希望する場合は、招待コードを添えて <a href="mailto:chinagdh@163.com">chinagdh@163.com</a> までメールしてください。成長データ、フレンド関係、挑戦記録、配達イベント、台帳を削除し、ランキングアカウントを削除してサーバー発行トークンを取り消し、任意の公開サポーターボード行と検証済みチップ記録を削除し、関連するサーバーデータを削除します。不正防止のため、一方向の端末ハッシュと管理監査記録を 24 か月保持し、その後削除する場合があります。ニックネーム、招待コード、フレンド関係、報酬履歴、サポーター行、スコアは残りません。「広告を削除」の権利は取り消されません。アプリを削除すると端末内データは消去されます。</p>
 
 <h3>エンドレスランキング</h3>
-<p>エンドレスランキングは任意で、アカウントやソーシャルログインは不要です。初回利用時に、端末 ID（iOS では IDFV）、アプリ ID、プラットフォームの SHA-256 ハッシュから匿名のランキングアカウントを作成します。サーバーはハッシュ、サーバー発行トークン、サーバー生成の匿名表示名、エンドレスのベストスコア（配達数、ゲート数、距離）、国コード、プラットフォームを保存します。生の端末 ID は送信も保存もされません。バージョン 1.0 では表示名の編集はできず、生成名は表示専用です。サービス内でランキングスコアを削除できます。このランキングは Game Center とは別で、Apple ID は不要です。</p>
+<p>エンドレスランキングは任意で、アカウントやソーシャルログインは不要です。初回利用時に、端末 ID（iOS では IDFV）、アプリ ID、プラットフォームの SHA-256 ハッシュから匿名のランキングアカウントを作成します。サーバーはハッシュ、サーバー発行トークン、サーバー生成の匿名表示名、エンドレスのベストスコア（配達数、ゲート数、距離）、国コード、プラットフォームを保存します。生の端末 ID は送信も保存もされません。バージョン 1.0 では表示名の編集はできず、生成名は表示専用です。ランキングスコアとアカウントの削除は、<a href="mailto:chinagdh@163.com">chinagdh@163.com</a> へのメールで依頼できます。このランキングは Game Center とは別で、Apple ID は不要です。</p>
 
 <h3>Game Center</h3>
-<p>iOS では、同じエンドレスベストスコアの Game Center ランキングを任意で表示できます。Game Center へのサインインは任意で、必須ではありません。サインインすると、Apple の GameKit サービスが Game Center アカウントを認証し、送信したスコアを受け取ります。本ゲームは Game Center のプロフィール情報（プレイヤー ID、表示名、メール、連絡先、Apple ID など）を取得・保存・送信しません。GameKit に認証とベストスコアの報告のみを要求します。Apple はスコアを Game Center アカウントに関連付け、Apple のプライバシーポリシーに基づき処理します。Game Center は iOS 設定で管理できます。本ゲームの「データを削除」は Apple が保持するデータを削除しません。</p>
+<p>iOS では、同じエンドレスベストスコアの Game Center ランキングを任意で表示できます。Game Center へのサインインは任意で、必須ではありません。サインインすると、Apple の GameKit サービスが Game Center アカウントを認証し、送信したスコアを受け取ります。本ゲームは Game Center のプロフィール情報（プレイヤー ID、表示名、メール、連絡先、Apple ID など）を取得・保存・送信しません。GameKit に認証とベストスコアの報告のみを要求します。Apple はスコアを Game Center アカウントに関連付け、Apple のプライバシーポリシーに基づき処理します。Game Center は iOS 設定で管理できます。ゲーム自身のデータを削除しても、Apple が保持するデータは削除されません。</p>
 
 <h3>本ポリシーのホスティング</h3>
 <p>本ポリシーは GitHub Pages でホストされています。GitHub は同社のプライバシー声明に基づき、IP アドレスやユーザーエージェントなどの標準的なリクエスト情報を処理する場合があります。ゲームデータは GitHub へ送信されません。</p>
@@ -208,7 +208,7 @@
 <li>追跡の許可は iOS の「設定」→「プライバシーとセキュリティ」→「トラッキング」で変更できます。</li>
 <li>言語、サウンド、振動はいつでも変更できます。</li>
 <li>Google UMP が要求する場合、「プライバシーオプション」を利用できます。</li>
-<li>「フレンドと報酬 → データを削除」からサーバー側のプレイヤーデータを削除できます。フレンド関係、招待の帰属、毎日の挑戦記録、配達イベント、復活チケット台帳、ランキングアカウント、任意のサポーターボード行とチップ記録が削除されます。一方向の端末ハッシュは不正防止のため 24 か月保持される場合があります。「広告を削除」の権利は保持されます。</li>
+<li>招待コードを添えて <a href="mailto:chinagdh@163.com">chinagdh@163.com</a> へメールすることで、サーバー側のプレイヤーデータの削除を依頼できます。フレンド関係、招待の帰属、毎日の挑戦記録、配達イベント、復活チケット台帳、ランキングアカウント、任意のサポーターボード行とチップ記録が削除されます。一方向の端末ハッシュは不正防止のため 24 か月保持される場合があります。「広告を削除」の権利は保持されます。</li>
 <li>アプリを削除するとローカルデータが消去されます。</li>
 <li>プライバシーに関するお問い合わせ: <a href="mailto:chinagdh@163.com">chinagdh@163.com</a></li>
 </ul>
@@ -236,13 +236,13 @@
 <h3>친구, 초대 및 부활권</h3>
 <p>"친구와 보상"은 선택 기능이며 소셜 로그인이 아닙니다. 전화번호, 이메일, 연락처, 소셜 계정을 요구하지 않습니다. 처음 사용할 때 서버에 익명 플레이어 ID를 하나 만들고 초대 코드, 친구 관계, 누가 누구를 초대했는지, 신규 플레이어가 첫 유효 배달을 완료했는지, 일일 친구 도전 상태, 부활권 지급·사용·관리자 취소의 불변 원장을 저장합니다. 같은 익명 ID는 iOS와 Android에서 공유됩니다.</p>
 <p>초대 링크에는 초대 코드와 서명만 포함되며 기기 ID, 계정 토큰, 닉네임, 정확한 위치, 연락처는 포함되지 않습니다. 신규 플레이어가 초대를 수락하고 첫 유효 배달을 완료하면 초대한 사람에게 게임 내 부활권 3장, 신규 플레이어에게 1장이 지급됩니다. 이 일회성 보상은 부정 사용 검토를 조건으로 실제 신규 플레이어 수에 제한 없이 적용됩니다. 일일 친구 도전은 서버 날짜 기준 초대한 사람 최대 3장, 초대받은 사람 1장이며 같은 친구 쌍은 하루에 한 번만 받을 수 있습니다. 부활권은 화폐가 아니며 현금 가치가 없고 교환·양도·거래·판매할 수 없습니다. 플레이를 이어가는 데만 사용됩니다. 부정 사용이 의심되면 수동 검토용 위험 플래그로 보관하며, 공유 IP, 초대 수, 속도만으로 자동 처벌하지 않습니다.</p>
-<p>패널에는 "내 데이터 삭제"가 있습니다. 확인하면 성장 데이터, 친구 관계, 도전 기록, 배달 이벤트, 원장을 삭제하고 순위표 계정을 제거하며, 선택형 공개 후원자 보드 행과 검증된 팁 기록을 삭제하고 로컬 자격 증명을 지웁니다. 부정 방지를 위해 단방향 기기 해시와 관리 감사 기록을 24개월 보관한 뒤 삭제할 수 있습니다. 닉네임, 초대 코드, 친구 관계, 보상 내역, 후원자 행, 점수는 남지 않습니다. "광고 제거" 권한은 취소되지 않습니다.</p>
+<p>앱 내 삭제 기능은 없습니다. 위 서버 측 플레이어 데이터를 삭제하려면 초대 코드를 포함하여 <a href="mailto:chinagdh@163.com">chinagdh@163.com</a>으로 이메일을 보내 주세요. 성장 데이터, 친구 관계, 도전 기록, 배달 이벤트, 원장을 삭제하고 순위표 계정을 제거하며 서버 발급 토큰을 취소하고, 선택형 공개 후원자 보드 행과 검증된 팁 기록을 삭제하며 관련 서버 데이터를 제거합니다. 부정 방지를 위해 단방향 기기 해시와 관리 감사 기록을 24개월 보관한 뒤 삭제할 수 있습니다. 닉네임, 초대 코드, 친구 관계, 보상 내역, 후원자 행, 점수는 남지 않습니다. "광고 제거" 권한은 취소되지 않습니다. 앱을 삭제하면 로컬 데이터가 지워집니다.</p>
 
 <h3>무한 순위표</h3>
-<p>무한 순위표는 선택 기능이며 계정이나 소셜 로그인이 필요하지 않습니다. 처음 사용할 때 기기 식별자(iOS는 IDFV), 앱 식별자, 플랫폼의 SHA-256 해시로 익명 순위표 계정을 만듭니다. 서버는 해시, 서버 발급 토큰, 서버 생성 익명 표시 이름, 최고 무한 점수(배달 수, 게이트 수, 거리), 국가 코드, 플랫폼을 저장합니다. 원본 기기 식별자는 전송되거나 저장되지 않습니다. 버전 1.0에서는 표시 이름 편집이 비활성화되어 있으며 생성된 이름은 표시용입니다. 서비스에서 순위표 점수를 삭제할 수 있습니다. 이 순위표는 Game Center와 별개이며 Apple ID가 필요하지 않습니다.</p>
+<p>무한 순위표는 선택 기능이며 계정이나 소셜 로그인이 필요하지 않습니다. 처음 사용할 때 기기 식별자(iOS는 IDFV), 앱 식별자, 플랫폼의 SHA-256 해시로 익명 순위표 계정을 만듭니다. 서버는 해시, 서버 발급 토큰, 서버 생성 익명 표시 이름, 최고 무한 점수(배달 수, 게이트 수, 거리), 국가 코드, 플랫폼을 저장합니다. 원본 기기 식별자는 전송되거나 저장되지 않습니다. 버전 1.0에서는 표시 이름 편집이 비활성화되어 있으며 생성된 이름은 표시용입니다. 순위표 점수와 계정 삭제는 <a href="mailto:chinagdh@163.com">chinagdh@163.com</a>으로 이메일을 보내 요청할 수 있습니다. 이 순위표는 Game Center와 별개이며 Apple ID가 필요하지 않습니다.</p>
 
 <h3>Game Center</h3>
-<p>iOS에서는 같은 무한 최고 점수를 위한 Game Center 순위표를 선택적으로 표시할 수 있습니다. Game Center 로그인은 선택 사항이며 필수가 아닙니다. 로그인하면 Apple의 GameKit 서비스가 Game Center 계정을 인증하고 제출한 점수를 받습니다. 게임은 Game Center 프로필 정보(플레이어 ID, 표시 이름, 이메일, 연락처, Apple ID 등)를 접근·저장·전송하지 않으며, GameKit에 인증과 최고 점수 보고만 요청합니다. Apple은 점수를 Game Center 계정과 연결하고 Apple의 개인정보 처리방침에 따라 처리합니다. Game Center는 iOS 설정에서 관리할 수 있습니다. 게임의 "내 데이터 삭제"는 Apple이 보유한 데이터를 삭제하지 않습니다.</p>
+<p>iOS에서는 같은 무한 최고 점수를 위한 Game Center 순위표를 선택적으로 표시할 수 있습니다. Game Center 로그인은 선택 사항이며 필수가 아닙니다. 로그인하면 Apple의 GameKit 서비스가 Game Center 계정을 인증하고 제출한 점수를 받습니다. 게임은 Game Center 프로필 정보(플레이어 ID, 표시 이름, 이메일, 연락처, Apple ID 등)를 접근·저장·전송하지 않으며, GameKit에 인증과 최고 점수 보고만 요청합니다. Apple은 점수를 Game Center 계정과 연결하고 Apple의 개인정보 처리방침에 따라 처리합니다. Game Center는 iOS 설정에서 관리할 수 있습니다. 게임 자체 데이터를 삭제해도 Apple이 보유한 데이터는 삭제되지 않습니다.</p>
 
 <h3>이 정책의 호스팅</h3>
 <p>이 정책은 GitHub Pages에서 호스팅됩니다. GitHub는 자체 개인정보 처리방침에 따라 IP 주소, 사용자 에이전트 같은 표준 웹 요청 정보를 처리할 수 있습니다. 게임 데이터는 GitHub로 전송되지 않습니다.</p>
@@ -256,7 +256,7 @@
 <li>추적 권한은 iOS 설정 → 개인정보 보호 및 보안 → 추적에서 변경할 수 있습니다.</li>
 <li>언어, 사운드, 진동은 언제든지 변경할 수 있습니다.</li>
 <li>Google UMP가 요구하는 경우 "개인정보 옵션"을 사용할 수 있습니다.</li>
-<li>"친구와 보상 → 내 데이터 삭제"에서 서버 측 플레이어 데이터를 삭제할 수 있습니다. 친구 관계, 초대 귀속, 일일 도전 기록, 배달 이벤트, 부활권 원장, 순위표 계정, 선택형 후원자 보드 행과 팁 기록이 삭제됩니다. 단방향 기기 해시는 부정 방지를 위해 24개월 보관될 수 있습니다. "광고 제거" 권한은 유지됩니다.</li>
+<li>초대 코드를 포함하여 <a href="mailto:chinagdh@163.com">chinagdh@163.com</a>으로 이메일을 보내 서버 측 플레이어 데이터 삭제를 요청할 수 있습니다. 친구 관계, 초대 귀속, 일일 도전 기록, 배달 이벤트, 부활권 원장, 순위표 계정, 선택형 후원자 보드 행과 팁 기록이 삭제됩니다. 단방향 기기 해시는 부정 방지를 위해 24개월 보관될 수 있습니다. "광고 제거" 권한은 유지됩니다.</li>
 <li>앱을 삭제하면 로컬 데이터가 지워집니다.</li>
 <li>개인정보 문의: <a href="mailto:chinagdh@163.com">chinagdh@163.com</a></li>
 </ul>
