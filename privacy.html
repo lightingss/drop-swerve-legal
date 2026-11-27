@@ -10,53 +10,254 @@
 <body><div class="wrap">
 <nav><a class="brand" href="./">DROP <span>&amp; SWERVE</span></a><a href="privacy.html">Privacy</a><a href="support.html">Support</a></nav>
 <main>
-<p class="muted">Effective date: 2026-11-24 · Version 1.0</p>
+<p class="muted">Effective date: 2026-11-27 · Version 1.0</p>
 <h1>Privacy <span>Policy</span></h1>
-<p>This policy applies to <strong>Drop &amp; Swerve</strong> for iPhone, iPad and any App Store build published by the developer. It describes what the shipping game does. If a future update adds a new data flow, this policy and the App Store privacy answers will be updated before that build is submitted.</p>
-<div class="langs"><a href="#en">English</a><a href="#zh">中文</a><a href="#ja">日本語</a><a href="#ko">한국어</a></div>
+<p>This policy applies to <strong>Drop &amp; Swerve</strong> for iPhone and iPad, published by <strong>Liang Song</strong>. It describes what version 1.0 of the game actually does. If a future update adds a new data flow, this policy and the App Store privacy answers will be updated before that build is submitted.</p>
+<p>Data controller: Liang Song (individual developer) · Contact: <a href="mailto:chinagdh@163.com">chinagdh@163.com</a></p>
+<div class="langs"><a href="#en">English</a><a href="#zh">中文</a><a href="#zh-hant">繁體中文</a><a href="#ja">日本語</a><a href="#ko">한국어</a></div>
 
 <h2 id="en">English</h2>
 <h3>Data stored on your device</h3>
-<p>Drop &amp; Swerve is a single-player game. The game stores the following locally on your device using Apple NSUserDefaults / Unity PlayerPrefs:</p>
+<p>Drop &amp; Swerve is a single-player game. The game stores the following locally on your device using Apple user defaults / Unity PlayerPrefs:</p>
 <ul>
-<li>language choice;</li>
+<li>your language choice;</li>
 <li>the eight-hour clock, ending and achievement state;</li>
-<li>best run record and unlocked local achievements;</li>
-<li>the developer-tip preview state and anonymous supporter ID;</li>
-<li>a local mock-ad state used only to demonstrate the ad surface.</li>
+<li>best runs and unlocked local achievements;</li>
+<li>sound, haptic and tutorial settings;</li>
+<li>local supporter points and an anonymous supporter ID.</li>
 </ul>
-<p>This data is not sent to a server. Deleting the app removes it. The game has no account, login, chat, user-generated content or analytics SDK.</p>
-<h3>Purchases</h3>
-<p>Optional developer tips are processed by Apple In-App Purchase. The developer does not receive your name, email, card details or Apple ID. The app may retain the transaction identifier and app receipt on-device so a purchase can be restored or verified. Apple's privacy policy applies to payment processing.</p>
-<p>If you choose to make your support public, the game sends only an anonymous supporter token, a preset display name, non-spendable rank points and a public/private flag to the verified supporter backend at <code>vsoho.work/api/drop-swerve</code> after Apple receipt verification. The backend stores the transaction ID, product ID, points, Apple environment (Production/Sandbox), timestamps and the public display name. It does not store your Apple ID, email, card details, device ID or raw receipt. The public top endpoint returns only opt-in display names and points.</p>
-<h3>Advertising and tracking</h3>
-<p>The current build uses a local mock ad surface, clearly labelled as a development test, and collects no advertising data. If a real advertising SDK is enabled in a future build, the required consent flow (including Google UMP in the EEA/UK/Switzerland and Apple ATT only if cross-app tracking is actually used) will be presented first, and this policy plus App Store privacy answers will be updated.</p>
+<p>This local data is not uploaded unless you use one of the optional features described below. Deleting the app removes it.</p>
+
+<h3>Purchases and the supporter board</h3>
+<p>Optional developer tips and the Remove Ads purchase are processed by Apple In-App Purchase. We do not receive your name, email address, card details or Apple ID. The app receives StoreKit product identifiers, transaction identifiers and the app receipt so it can deliver the purchase and restore entitlements.</p>
+<p>If you choose to make your support public, the game sends an anonymous supporter token, a server-generated display name, non-spendable rank points and a public/private flag to our supporter API at <code>vsoho.work</code> after Apple receipt verification. The server stores the transaction ID, product ID, points, Apple environment (Production or Sandbox), timestamps and the public display name. It does not store your Apple ID, email address, card details, device identifier or raw receipt. The public board shows only opted-in display names and points.</p>
+
+<h3>Advertising and consent</h3>
+<p>The game uses Google AdMob and Google User Messaging Platform (UMP) to show ads and to collect consent where required. The ad SDK may process device or advertising identifiers, approximate location derived from your IP address, ad requests, impressions and clicks, related app events and diagnostics, for ad delivery, measurement, frequency capping, fraud prevention and reliability. This data may be shared with Google and its measurement partners under their policies.</p>
+<p>Ads are shown only after a run result or the completed ending, and an optional rewarded video may be offered on the failure screen; declining it does not block play. Where required, a Privacy Options entry in the pause menu lets you change your consent choices.</p>
+<p>This version does not request App Tracking Transparency permission and does not use the advertising identifier for tracking. If a future version enables personalized advertising or App Tracking Transparency, this policy and the App Store privacy answers will be updated before that version is released.</p>
+
+<h3>Product analytics (Firebase)</h3>
+<p>The game includes Google Firebase Analytics. Collection starts disabled. It is enabled only when UMP reports that consent is not required, or that consent was obtained with IAB TCF Purpose 1 set; if consent is refused or unknown, analytics remains off.</p>
+<p>Events cover game starts and runs, tutorial progress, settings changes, charge/drop/impact timing, obstacle passes and near misses, deaths, deliveries, revive offers and rewarded-ad outcomes, purchases and restores (product ID and result), and coarse ad impressions. Event parameters are limited to gameplay values such as mode, district, order number, object type, charge time, travel distance, success or failure reason, revive method and in-game voucher counts. A random per-session identifier groups events; it is not your anonymous player account, invite code, invite token, nickname or an advertising identifier. The app does not send Apple or Google account details, payment details, receipts, transaction IDs, contacts or chat content to Firebase. Firebase may also process an app-scoped installation identifier and operational diagnostics. The Privacy Options entry re-evaluates collection immediately when you change your choice.</p>
+
+<h3>Friends, invitations and revive tickets</h3>
+<p>The Friends &amp; Rewards panel is optional. It is not a social login and does not ask for your phone number, email address, contact list or social-media account. On first use, the game creates one anonymous player identity on our server. The server stores an invite code, your friendships, who invited whom, whether a new player completed their first valid delivery, daily friend-challenge state, and an immutable ledger of revive-ticket grants, spends and administrative reversals. The same anonymous identity is shared between iOS and Android.</p>
+<p>An invitation link contains an invite code and a signature; it contains no device identifier, account token, nickname, exact location or contact information. A new player who accepts an invitation and completes their first valid delivery gives the inviter 3 in-game revive tickets and receives 1; this one-time reward can be earned for any number of genuine new players, subject to anti-abuse review. Daily friend challenges give up to 3 inviter tickets and 1 invitee ticket per server day, and the same pair of friends can earn at most once per day. Revive tickets are not money, have no cash value and cannot be exchanged, transferred, traded or sold; they are used only to resume a run. Suspected abuse is retained as a risk flag for manual review; we do not apply automatic punishment based only on shared IP addresses, invitation count or speed.</p>
+<p>The panel has a “Delete my data” action. After confirmation it deletes your growth data, friendships, challenge records, delivery events and ledger, removes your leaderboard account, deletes the optional public supporter-board row and its verified tip records, and clears the local credential. A one-way device hash and administrative audit records may be retained for 24 months for fraud prevention and are then purged; no nickname, invite code, friendship, reward history, supporter row or score remains. The Remove Ads entitlement is not revoked.</p>
+
+<h3>Endless leaderboard</h3>
+<p>The endless leaderboard is optional and does not require an account or social login. On first use, the game creates an anonymous leaderboard account from a SHA-256 hash of the device identifier (IDFV on iOS), the app identifier and the platform. The server stores the hash, a server-issued token, a server-generated anonymous display name, your best endless score (deliveries, gates and distance), your country code and the platform. The raw device identifier is not sent or stored. Custom display-name editing is disabled in version 1.0; the generated name is display-only. You can delete your leaderboard score from the service. This leaderboard is separate from Game Center and does not require an Apple ID.</p>
+
 <h3>Game Center</h3>
-<p>Game Center is optional. If you sign in, Apple handles your Game Center identity; the game submits a run score and reads leaderboard ranks. The game is fully playable without signing in.</p>
+<p>On iOS, the game can show an optional Game Center leaderboard for the same endless best score. Game Center sign-in is optional and never required to play. If you sign in, Apple’s GameKit service authenticates your Game Center account and receives the score you submit. The game does not access, store or send your Game Center profile data (such as player ID, display name, email, contacts or Apple ID); it only asks GameKit to authenticate and report the best score. Apple associates the score with your Game Center account and processes it under Apple’s privacy policy. You can manage Game Center in iOS Settings. The game’s own “Delete my data” action does not delete data held by Apple.</p>
+
 <h3>Hosting of this policy</h3>
-<p>This policy is hosted by GitHub Pages. GitHub may process standard web-request information (such as IP address and user agent) under GitHub's own privacy statement. The game does not send your game data to GitHub.</p>
+<p>This policy is hosted by GitHub Pages. GitHub may process standard web-request information such as IP address and user agent under GitHub’s own privacy statement. The game does not send your game data to GitHub.</p>
+
 <h3>Children</h3>
-<p>The game is intended for a general audience and does not knowingly collect personal information from children. There are no accounts, chat rooms or user-generated content.</p>
+<p>The game is not directed to children under 13 and does not knowingly collect personal information from children. It has no chat, free-form posts or browser. The optional leaderboard stores only an anonymous account, a short generated display name and an endless score.</p>
+
 <h3>Your choices and deletion</h3>
-<p>You can delete all local game data by deleting the app. For a privacy request, email <a href="mailto:chinagdh@163.com">chinagdh@163.com</a>. If you have a public supporter row, contact support to hide or delete it.</p>
+<ul>
+<li>You can play without any purchase, Game Center sign-in or cross-platform leaderboard use.</li>
+<li>You can change the in-game language, sound and haptics at any time.</li>
+<li>You can use the Privacy Options entry when Google UMP requires one.</li>
+<li>You can delete your server-side player data from “Friends &amp; Rewards → Delete my data”. This removes friendships, invitation attribution, daily challenge records, delivery events, the revive-ticket ledger, the leaderboard account and the optional supporter-board row and tip records; a one-way device hash may be retained for 24 months for fraud prevention. The Remove Ads entitlement is kept.</li>
+<li>You can clear local data by deleting the app.</li>
+<li>For privacy questions, contact <a href="mailto:chinagdh@163.com">chinagdh@163.com</a>.</li>
+</ul>
+
+<h3>Changes</h3>
+<p>We may update this policy when the game or its service providers change. The effective date at the top of this page will change.</p>
 
 <h2 id="zh">中文</h2>
-<p>Drop &amp; Swerve 是单人游戏。当前版本仅在设备本地保存语言、八小时时钟、结局/成就、最佳记录、开发者支持预览和模拟广告状态，不会上传服务器；删除 App 即可清除。游戏没有账号、登录、聊天、用户生成内容或统计 SDK。</p>
-<p>可选的“支持开发者”由 Apple 内购处理。开发者不会获得你的姓名、邮箱、银行卡或 Apple ID；交易号和应用收据可能仅保存在设备上，用于恢复或验证。如果你选择公开支持记录，游戏会在 Apple 收据验证后，仅向 <code>vsoho.work/api/drop-swerve</code> 的验证后端发送匿名标识、预设昵称、不可消费的排名积分和公开/私密开关。后端保存交易号、商品号、积分、Apple 环境、时间和公开昵称，不保存 Apple ID、邮箱、银行卡、设备 ID 或原始收据。公开榜单只返回主动公开的昵称和积分。</p>
-<p>当前版本使用明确标注的本地模拟广告位，不收集广告数据。如未来启用真实广告 SDK，会先提供适用的同意流程（欧洲经济区/英国/瑞士使用 Google UMP；只有实际进行跨 App 追踪时才请求 Apple ATT），并在提交前更新本政策与 App 隐私答案。Game Center 可选，Apple 处理身份，未登录也能完整游玩。</p>
-<p>本政策页面由 GitHub Pages 托管；GitHub 可能按其隐私声明处理标准网页请求信息。游戏不会把游戏数据发送给 GitHub。删除 App 即可清除本地数据。隐私联系：<a href="mailto:chinagdh@163.com">chinagdh@163.com</a>。</p>
+<h3>设备本地数据</h3>
+<p>Drop &amp; Swerve 是单人游戏。游戏通过 iOS 用户偏好设置 / Unity PlayerPrefs 在设备本地保存：语言选择；八小时时钟、结局与成就状态；最佳记录与已解锁成就；音效、震动与教学设置；本地支持者积分与匿名支持者标识。除下文所述的可选功能外，这些数据不会上传服务器；删除 App 即会清除。</p>
+
+<h3>购买与支持者榜</h3>
+<p>可选的“支持开发者”与“移除广告”由 Apple 内购处理。我们不会获得你的姓名、邮箱、银行卡信息或 Apple ID。App 会读取 StoreKit 商品标识、交易标识和应用收据，用于交付购买与恢复权益。</p>
+<p>如果你选择公开支持记录，游戏会在 Apple 收据验证后，向 <code>vsoho.work</code> 的支持者接口发送匿名支持者令牌、服务器生成的显示名、不可消费的排名积分和公开/私密开关。服务器保存交易号、商品号、积分、Apple 环境（Production 或 Sandbox）、时间戳和公开显示名；不保存你的 Apple ID、邮箱、银行卡、设备标识或原始收据。公开榜只展示主动公开的显示名与积分。</p>
+
+<h3>广告与同意</h3>
+<p>游戏使用 Google AdMob 与 Google User Messaging Platform（UMP）展示广告并在适用地区收集同意。广告 SDK 可能处理设备标识或广告标识、由 IP 地址推导的粗略位置、广告请求/展示/点击、相关应用事件与诊断信息，用于广告投放、效果衡量、频次控制、反欺诈与稳定性。这些数据可能依据 Google 及其衡量合作伙伴的政策与其共享。</p>
+<p>广告只在一局结束或结局完成后展示；失败页可能提供可选激励视频，拒绝观看不影响继续游戏。在适用地区，暂停菜单中的“隐私选项”可随时修改同意选择。</p>
+<p>本版本不请求 App Tracking Transparency（ATT）权限，也不将广告标识用于追踪。若未来版本启用个性化广告或 ATT，我们会在该版本发布前更新本政策与 App Store 隐私答案。</p>
+
+<h3>产品分析（Firebase）</h3>
+<p>游戏包含 Google Firebase Analytics，采集默认关闭。仅当 UMP 返回“无需同意”，或已获得同意且 IAB TCF 第 1 项（Purpose 1）为开启状态时才启用；拒绝或状态未知时保持关闭。</p>
+<p>事件包括：游戏启动与对局、教学进度、设置变更、蓄力/投放/撞击时机、障碍通过与否、死亡、送达、复活机会与激励广告结果、购买与恢复（商品号与结果）、粗略广告展示。事件参数仅限玩法数值，例如模式、街区、订单号、物体类型、蓄力时长、移动距离、成功/失败原因、复活方式与游戏内券数。一个随机会话标识用于归组事件；它不是你的匿名玩家账号、邀请码、邀请令牌、昵称，也不是广告标识。App 不会向 Firebase 发送 Apple/Google 账号信息、支付信息、收据、交易号、通讯录或聊天内容。Firebase 还可能处理应用级安装标识与运行诊断。修改“隐私选项”后，采集状态会立即重新判定。</p>
+
+<h3>好友、邀请与复活券</h3>
+<p>“好友与奖励”为可选功能，不是社交登录，不要求手机号、邮箱、通讯录或社交账号。首次使用时，游戏会在我们的服务器上创建一个匿名玩家身份，并保存邀请码、好友关系、谁邀请了谁、新玩家是否完成首次有效送达、每日好友挑战状态，以及复活券发放、消耗与管理回滚的不可变流水。同一匿名身份在 iOS 与 Android 间共用。</p>
+<p>邀请链接只包含邀请码与签名，不包含设备标识、账号令牌、昵称、精确位置或联系方式。新玩家接受邀请并完成首次有效送达后，邀请人获得 3 张游戏内复活券，新玩家获得 1 张；该一次性奖励可对任意数量的真实新玩家生效，但会接受反作弊审查。每日好友挑战每个服务器日最多发放邀请人 3 张、被邀请人 1 张，同一对好友每天最多获得一次。复活券不是货币，无现金价值，不可兑换、转让、交易或出售，仅用于继续对局。疑似滥用会作为风险标记保留以供人工审查；我们不会仅凭共享 IP、邀请数量或速度自动处罚。</p>
+<p>面板内提供“删除我的数据”。确认后将删除你的成长数据、好友关系、挑战记录、送达事件与流水，移除排行榜账号，删除可选的公开支持者榜记录及其已验证的支持记录，并清除本地凭证。单向设备哈希与管理审计记录可能为反欺诈保留 24 个月，随后清除；不会保留昵称、邀请码、好友关系、奖励历史、支持者记录或分数。“移除广告”权益不会被撤销。</p>
+
+<h3>无尽排行榜</h3>
+<p>无尽排行榜为可选功能，不需要账号或社交登录。首次使用时，游戏以设备标识（iOS 为 IDFV）、应用标识与平台的 SHA-256 哈希创建匿名排行榜账号。服务器保存该哈希、服务器签发的令牌、服务器生成的匿名显示名、你的无尽最佳成绩（送达数、门数与距离）、国家/地区代码与平台。原始设备标识不会发送或保存。1.0 版本不开放自定义昵称，显示名仅用于展示。你可以在服务内删除自己的排行榜成绩。该排行榜与 Game Center 相互独立，不需要 Apple ID。</p>
+
+<h3>Game Center</h3>
+<p>在 iOS 上，游戏可显示可选的 Game Center 无尽排行榜。Game Center 登录完全可选，不登录也能完整游玩。登录后，Apple 的 GameKit 服务会认证你的 Game Center 账号并接收你提交的成绩。游戏不会访问、保存或发送你的 Game Center 个人资料（例如玩家 ID、显示名、邮箱、通讯录或 Apple ID）；它只请求 GameKit 完成认证并上报最佳成绩。Apple 会将成绩与你的 Game Center 账号关联，并按 Apple 的隐私政策处理。你可以在 iOS 设置中管理 Game Center。游戏内的“删除我的数据”不会删除 Apple 持有的数据。</p>
+
+<h3>本政策的托管</h3>
+<p>本政策由 GitHub Pages 托管。GitHub 可能按其隐私声明处理标准网页请求信息（如 IP 地址与浏览器标识）。游戏不会向 GitHub 发送你的游戏数据。</p>
+
+<h3>儿童</h3>
+<p>本游戏不面向 13 岁以下儿童，也不会有意收集儿童的个人信息。游戏没有聊天、自由发布内容或浏览器。可选排行榜仅保存匿名账号、简短生成显示名与无尽成绩。</p>
+
+<h3>你的选择与删除</h3>
+<ul>
+<li>你可以不购买任何商品、不登录 Game Center、不使用跨平台排行榜，完整游玩。</li>
+<li>你可以随时修改语言、音效与震动。</li>
+<li>在 Google UMP 要求时，你可以使用“隐私选项”。</li>
+<li>你可以在“好友与奖励 → 删除我的数据”删除服务器侧玩家数据：好友关系、邀请归因、每日挑战记录、送达事件、复活券流水、排行榜账号以及可选的支持者榜记录与支持记录；单向设备哈希可能为反欺诈保留 24 个月。“移除广告”权益会保留。</li>
+<li>删除 App 可清除本地数据。</li>
+<li>隐私问题请联系 <a href="mailto:chinagdh@163.com">chinagdh@163.com</a>。</li>
+</ul>
+
+<h3>变更</h3>
+<p>当游戏或其服务提供方发生变化时，我们可能更新本政策，并更新页面顶部的生效日期。</p>
+
+<h2 id="zh-hant">繁體中文</h2>
+<h3>裝置本機資料</h3>
+<p>Drop &amp; Swerve 是單人遊戲。遊戲透過 iOS 使用者偏好設定 / Unity PlayerPrefs 在裝置本機儲存：語言選擇；八小時時鐘、結局與成就狀態；最佳紀錄與已解鎖成就；音效、震動與教學設定；本機支持者積分與匿名支持者識別碼。除下文所述的可選功能外，這些資料不會上傳伺服器；刪除 App 即會清除。</p>
+
+<h3>購買與支持者榜</h3>
+<p>可選的「支援開發者」與「移除廣告」由 Apple 內購處理。我們不會取得你的姓名、電子郵件、信用卡資料或 Apple ID。App 會讀取 StoreKit 商品識別碼、交易識別碼與應用程式收據，用於交付購買與恢復權益。</p>
+<p>如果你選擇公開支持紀錄，遊戲會在 Apple 收據驗證後，向 <code>vsoho.work</code> 的支持者介面傳送匿名支持者權杖、伺服器產生的顯示名稱、不可消費的排名積分與公開/私人開關。伺服器保存交易編號、商品編號、積分、Apple 環境（Production 或 Sandbox）、時間戳記與公開顯示名稱；不保存你的 Apple ID、電子郵件、信用卡、裝置識別碼或原始收據。公開榜只顯示主動公開的顯示名稱與積分。</p>
+
+<h3>廣告與同意</h3>
+<p>遊戲使用 Google AdMob 與 Google User Messaging Platform（UMP）顯示廣告，並在適用地區蒐集同意。廣告 SDK 可能處理裝置識別碼或廣告識別碼、由 IP 位址推導的粗略位置、廣告請求/曝光/點擊、相關應用程式事件與診斷資訊，用於廣告投放、成效衡量、頻次控制、反詐欺與穩定性。這些資料可能依 Google 及其衡量合作夥伴的政策與其共享。</p>
+<p>廣告只在一局結束或結局完成後顯示；失敗頁可能提供可選激勵影片，拒絕觀看不影響繼續遊戲。在適用地區，暫停選單中的「隱私選項」可隨時修改同意選擇。</p>
+<p>本版本不要求 App Tracking Transparency（ATT）權限，也不將廣告識別碼用於追蹤。若未來版本啟用個人化廣告或 ATT，我們會在該版本發布前更新本政策與 App Store 隱私權答案。</p>
+
+<h3>產品分析（Firebase）</h3>
+<p>遊戲包含 Google Firebase Analytics，蒐集預設關閉。僅當 UMP 回報「無需同意」，或已取得同意且 IAB TCF 第 1 項（Purpose 1）為開啟狀態時才啟用；拒絕或狀態未知時保持關閉。</p>
+<p>事件包括：遊戲啟動與對局、教學進度、設定變更、蓄力/投放/撞擊時機、障礙通過與否、死亡、送達、復活機會與激勵廣告結果、購買與恢復（商品編號與結果）、粗略廣告曝光。事件參數僅限玩法數值，例如模式、街區、訂單號、物體類型、蓄力時間、移動距離、成功/失敗原因、復活方式與遊戲內券數。隨機會話識別碼用於歸組事件；它不是你的匿名玩家帳號、邀請碼、邀請權杖、暱稱，也不是廣告識別碼。App 不會向 Firebase 傳送 Apple/Google 帳號資訊、付款資訊、收據、交易編號、通訊錄或聊天內容。Firebase 還可能處理應用程式層級安裝識別碼與運行診斷。修改「隱私選項」後，蒐集狀態會立即重新判定。</p>
+
+<h3>好友、邀請與復活券</h3>
+<p>「好友與獎勵」為可選功能，不是社群登入，不要求手機號碼、電子郵件、通訊錄或社群帳號。首次使用時，遊戲會在我們的伺服器建立一個匿名玩家身分，並保存邀請碼、好友關係、誰邀請了誰、新玩家是否完成首次有效送達、每日好友挑戰狀態，以及復活券發放、消耗與管理回滾的不可變流水。同一匿名身分在 iOS 與 Android 間共用。</p>
+<p>邀請連結只包含邀請碼與簽章，不包含裝置識別碼、帳號權杖、暱稱、精確位置或聯絡方式。新玩家接受邀請並完成首次有效送達後，邀請人獲得 3 張遊戲內復活券，新玩家獲得 1 張；該一次性獎勵可對任意數量的真實新玩家生效，但會接受反作弊審查。每日好友挑戰每個伺服器日最多發放邀請人 3 張、被邀請人 1 張，同一對好友每天最多獲得一次。復活券不是貨幣，無現金價值，不可兌換、轉讓、交易或出售，僅用於繼續對局。疑似濫用會作為風險標記保留以供人工審查；我們不會僅憑共用 IP、邀請數量或速度自動處罰。</p>
+<p>面板內提供「刪除我的資料」。確認後將刪除你的成長資料、好友關係、挑戰紀錄、送達事件與流水，移除排行榜帳號，刪除可選的公開支持者榜紀錄及其已驗證的支持紀錄，並清除本機憑證。單向裝置雜湊與管理審計紀錄可能為反詐欺保留 24 個月，隨後清除；不會保留暱稱、邀請碼、好友關係、獎勵歷史、支持者紀錄或分數。「移除廣告」權益不會被撤銷。</p>
+
+<h3>無盡排行榜</h3>
+<p>無盡排行榜為可選功能，不需要帳號或社群登入。首次使用時，遊戲以裝置識別碼（iOS 為 IDFV）、應用程式識別碼與平台的 SHA-256 雜湊建立匿名排行榜帳號。伺服器保存該雜湊、伺服器簽發的權杖、伺服器產生的匿名顯示名稱、你的無盡最佳成績（送達數、門數與距離）、國家/地區代碼與平台。原始裝置識別碼不會傳送或保存。1.0 版本不開放自訂暱稱，顯示名稱僅供展示。你可以在服務內刪除自己的排行榜成績。該排行榜與 Game Center 相互獨立，不需要 Apple ID。</p>
+
+<h3>Game Center</h3>
+<p>在 iOS 上，遊戲可顯示可選的 Game Center 無盡排行榜。Game Center 登入完全可選，不登入也能完整遊玩。登入後，Apple 的 GameKit 服務會驗證你的 Game Center 帳號並接收你提交的成績。遊戲不會存取、保存或傳送你的 Game Center 個人資料（例如玩家 ID、顯示名稱、電子郵件、通訊錄或 Apple ID）；它只請 GameKit 完成驗證並回報最佳成績。Apple 會將成績與你的 Game Center 帳號關聯，並依 Apple 的隱私權政策處理。你可以在 iOS 設定中管理 Game Center。遊戲內的「刪除我的資料」不會刪除 Apple 持有的資料。</p>
+
+<h3>本政策的託管</h3>
+<p>本政策由 GitHub Pages 託管。GitHub 可能依其隱私權聲明處理標準網頁請求資訊（例如 IP 位址與瀏覽器識別碼）。遊戲不會向 GitHub 傳送你的遊戲資料。</p>
+
+<h3>兒童</h3>
+<p>本遊戲不面向 13 歲以下兒童，也不會有意蒐集兒童的個人資料。遊戲沒有聊天、自由發布內容或瀏覽器。可選排行榜僅保存匿名帳號、簡短產生的顯示名稱與無盡成績。</p>
+
+<h3>你的選擇與刪除</h3>
+<ul>
+<li>你可以不購買任何商品、不登入 Game Center、不使用跨平台排行榜，完整遊玩。</li>
+<li>你可以隨時修改語言、音效與震動。</li>
+<li>在 Google UMP 要求時，你可以使用「隱私選項」。</li>
+<li>你可以在「好友與獎勵 → 刪除我的資料」刪除伺服器端玩家資料：好友關係、邀請歸因、每日挑戰紀錄、送達事件、復活券流水、排行榜帳號以及可選的支持者榜紀錄與支持紀錄；單向裝置雜湊可能為反詐欺保留 24 個月。「移除廣告」權益會保留。</li>
+<li>刪除 App 可清除本機資料。</li>
+<li>隱私問題請聯絡 <a href="mailto:chinagdh@163.com">chinagdh@163.com</a>。</li>
+</ul>
+
+<h3>變更</h3>
+<p>當遊戲或其服務提供者發生變化時，我們可能更新本政策，並更新頁面頂部的生效日期。</p>
 
 <h2 id="ja">日本語</h2>
-<p>Drop &amp; Swerve はシングルプレイゲームです。本ビルドは言語、8時間時計、エンディング/実績、ベスト記録、開発者チップのプレビュー、模擬広告状態を端末の NSUserDefaults / Unity PlayerPrefs にのみ保存し、サーバーへ送信しません。アプリを削除すると消去されます。アカウント、ログイン、チャット、UGC、解析 SDK はありません。</p>
-<p>任意の開発者チップは Apple の App 内課金で処理され、開発者は氏名・メール・カード・Apple ID を受け取りません。取引 ID とアプリレシートは、復元または検証のため端末内に保持される場合があります。現行ビルドは全球支援ボードを運営していません。将来有効にする場合は、Apple のレシート検証後に匿名トークン、既定の表示名、消費できないランク点、公開/非公開フラグのみを送信します。</p>
-<p>現行ビルドは明示されたローカル模擬広告面を使用し、広告データを収集しません。将来 AdMob 等を有効にする場合は、EEA/英国/スイスで Google UMP、実際にクロスアプリ追跡を行う場合のみ Apple ATT を先に提示し、提出前に本ポリシーと App プライバシー回答を更新します。Game Center は任意で、ログインしなくても遊べます。</p>
-<p>本ポリシーは GitHub Pages でホストされています。GitHub は同社のプライバシー声明に基づき標準的なリクエスト情報を処理する場合があります。ゲームデータは GitHub へ送信されません。お問い合わせ: <a href="mailto:chinagdh@163.com">chinagdh@163.com</a>。</p>
+<h3>端末内に保存されるデータ</h3>
+<p>Drop &amp; Swerve はシングルプレイゲームです。本ゲームは iOS のユーザー設定 / Unity PlayerPrefs を使用して、言語設定、8 時間時計・エンディング・実績の状態、ベスト記録と解除済み実績、サウンド・振動・チュートリアルの設定、ローカルのサポーター点と匿名サポーター ID を端末内に保存します。以下に記載する任意機能を利用しない限り、これらのデータはサーバーへ送信されません。アプリを削除すると消去されます。</p>
+
+<h3>購入とサポーターボード</h3>
+<p>任意の開発者チップと「広告を削除」は Apple の App 内課金で処理されます。開発者が氏名、メールアドレス、カード情報、Apple ID を受け取ることはありません。アプリは購入の提供と復元のため、StoreKit の商品 ID、取引 ID、アプリレシートを取得します。</p>
+<p>サポートを公開する場合、ゲームは Apple のレシート検証後、<code>vsoho.work</code> のサポーター API へ匿名サポータートークン、サーバー生成の表示名、消費できないランク点、公開/非公開フラグを送信します。サーバーは取引 ID、商品 ID、ポイント、Apple 環境（Production / Sandbox）、タイムスタンプ、公開表示名を保存し、Apple ID、メールアドレス、カード情報、端末 ID、生のレシートは保存しません。公開ボードには公開を選んだ表示名とポイントのみが表示されます。</p>
+
+<h3>広告と同意</h3>
+<p>本ゲームは Google AdMob と Google User Messaging Platform（UMP）を使用して広告を表示し、必要な地域で同意を取得します。広告 SDK は、端末 ID または広告 ID、IP アドレスから推定されるおおよその位置、広告リクエスト・表示・クリック、関連するアプリイベント、診断情報を、広告配信、測定、頻度制御、不正防止、信頼性のために処理する場合があります。これらのデータは Google およびその測定パートナーのポリシーに基づき共有される場合があります。</p>
+<p>広告は 1 回のプレイ結果またはエンディング完了後にのみ表示されます。失敗画面では任意のリワード動画を提示する場合があり、視聴しなくてもプレイを継続できます。必要な地域では、ポーズメニューの「プライバシーオプション」から同意内容を変更できます。</p>
+<p>本バージョンは App Tracking Transparency（ATT）を要求せず、広告 ID をトラッキングに使用しません。将来のバージョンでパーソナライズ広告または ATT を有効にする場合は、そのリリース前に本ポリシーと App Store のプライバシー回答を更新します。</p>
+
+<h3>製品分析（Firebase）</h3>
+<p>本ゲームには Google Firebase Analytics が組み込まれています。収集は初期状態で無効です。UMP が「同意不要」と判定した場合、または IAB TCF の Purpose 1 が有効な同意が得られた場合にのみ有効になります。拒否または不明の場合は無効のままです。</p>
+<p>イベントには、ゲーム開始とプレイ、チュートリアル進行、設定変更、チャージ/ドロップ/衝撃のタイミング、障害物の通過・ニアミス、死亡、配達、復活の提案とリワード広告の結果、購入と復元（商品 ID と結果）、おおよその広告表示が含まれます。イベントパラメータは、モード、地区、注文番号、オブジェクト種別、チャージ時間、移動距離、成功/失敗理由、復活方法、ゲーム内券数などのゲームプレイ値に限定されます。ランダムなセッション識別子でイベントをグループ化しますが、これは匿名プレイヤーアカウント、招待コード、招待トークン、ニックネーム、広告 ID ではありません。Apple/Google アカウント情報、支払い情報、レシート、取引 ID、連絡先、チャット内容を Firebase へ送信しません。Firebase はアプリ単位のインストール識別子と運用診断情報を処理する場合があります。「プライバシーオプション」を変更すると、収集状態は直ちに再判定されます。</p>
+
+<h3>フレンド、招待、復活チケット</h3>
+<p>「フレンドと報酬」は任意機能です。ソーシャルログインではなく、電話番号、メールアドレス、連絡先、SNS アカウントを求めません。初回利用時に、サーバー上に匿名のプレイヤー ID を 1 つ作成し、招待コード、フレンド関係、誰が誰を招待したか、新規プレイヤーが最初の有効な配達を完了したか、毎日のフレンド挑戦の状態、復活チケットの付与・消費・管理者による取消の不変台帳を保存します。同じ匿名 ID は iOS と Android で共有されます。</p>
+<p>招待リンクには招待コードと署名のみが含まれ、端末 ID、アカウントトークン、ニックネーム、正確な位置、連絡先は含まれません。新規プレイヤーが招待を承諾し最初の有効な配達を完了すると、招待者にゲーム内復活チケット 3 枚、新規プレイヤーに 1 枚が付与されます。この一度限りの報酬は、不正防止の確認を条件に、任意の人数の実在新規プレイヤーに対して成立します。毎日のフレンド挑戦はサーバー日ごとに招待者最大 3 枚、被招待者 1 枚で、同じフレンド同士は 1 日 1 回までです。復活チケットは通貨ではなく、現金価値もなく、交換・譲渡・取引・販売はできません。プレイの再開にのみ使用します。不正の疑いがある場合は手動確認用のリスクフラグとして保持し、共有 IP、招待数、速度のみによる自動処罰は行いません。</p>
+<p>パネルには「データを削除」があります。確認後、成長データ、フレンド関係、挑戦記録、配達イベント、台帳を削除し、ランキングアカウントを削除し、任意の公開サポーターボード行と検証済みチップ記録を削除し、ローカル認証情報を消去します。不正防止のため、一方向の端末ハッシュと管理監査記録を 24 か月保持し、その後削除する場合があります。ニックネーム、招待コード、フレンド関係、報酬履歴、サポーター行、スコアは残りません。「広告を削除」の権利は取り消されません。</p>
+
+<h3>エンドレスランキング</h3>
+<p>エンドレスランキングは任意で、アカウントやソーシャルログインは不要です。初回利用時に、端末 ID（iOS では IDFV）、アプリ ID、プラットフォームの SHA-256 ハッシュから匿名のランキングアカウントを作成します。サーバーはハッシュ、サーバー発行トークン、サーバー生成の匿名表示名、エンドレスのベストスコア（配達数、ゲート数、距離）、国コード、プラットフォームを保存します。生の端末 ID は送信も保存もされません。バージョン 1.0 では表示名の編集はできず、生成名は表示専用です。サービス内でランキングスコアを削除できます。このランキングは Game Center とは別で、Apple ID は不要です。</p>
+
+<h3>Game Center</h3>
+<p>iOS では、同じエンドレスベストスコアの Game Center ランキングを任意で表示できます。Game Center へのサインインは任意で、必須ではありません。サインインすると、Apple の GameKit サービスが Game Center アカウントを認証し、送信したスコアを受け取ります。本ゲームは Game Center のプロフィール情報（プレイヤー ID、表示名、メール、連絡先、Apple ID など）を取得・保存・送信しません。GameKit に認証とベストスコアの報告のみを要求します。Apple はスコアを Game Center アカウントに関連付け、Apple のプライバシーポリシーに基づき処理します。Game Center は iOS 設定で管理できます。本ゲームの「データを削除」は Apple が保持するデータを削除しません。</p>
+
+<h3>本ポリシーのホスティング</h3>
+<p>本ポリシーは GitHub Pages でホストされています。GitHub は同社のプライバシー声明に基づき、IP アドレスやユーザーエージェントなどの標準的なリクエスト情報を処理する場合があります。ゲームデータは GitHub へ送信されません。</p>
+
+<h3>児童について</h3>
+<p>本ゲームは 13 歳未満の児童を対象としておらず、児童の個人情報を意図的に収集しません。チャット、自由投稿、ブラウザはありません。任意のランキングは、匿名アカウント、短い生成表示名、エンドレススコアのみを保存します。</p>
+
+<h3>選択と削除</h3>
+<ul>
+<li>購入、Game Center サインイン、クロスプラットフォームランキングを使わずにプレイできます。</li>
+<li>言語、サウンド、振動はいつでも変更できます。</li>
+<li>Google UMP が要求する場合、「プライバシーオプション」を利用できます。</li>
+<li>「フレンドと報酬 → データを削除」からサーバー側のプレイヤーデータを削除できます。フレンド関係、招待の帰属、毎日の挑戦記録、配達イベント、復活チケット台帳、ランキングアカウント、任意のサポーターボード行とチップ記録が削除されます。一方向の端末ハッシュは不正防止のため 24 か月保持される場合があります。「広告を削除」の権利は保持されます。</li>
+<li>アプリを削除するとローカルデータが消去されます。</li>
+<li>プライバシーに関するお問い合わせ: <a href="mailto:chinagdh@163.com">chinagdh@163.com</a></li>
+</ul>
+
+<h3>変更</h3>
+<p>ゲームまたはサービス提供者が変更された場合、本ポリシーを更新し、ページ上部の発効日を変更することがあります。</p>
 
 <h2 id="ko">한국어</h2>
-<p>Drop &amp; Swerve는 싱글 플레이 게임입니다. 이 빌드는 언어, 8시간 시계, 엔딩/업적, 최고 기록, 개발자 후원 미리보기, 모의 광고 상태를 기기의 NSUserDefaults / Unity PlayerPrefs에만 저장하며 서버로 전송하지 않습니다. 앱을 삭제하면 제거됩니다. 계정, 로그인, 채팅, UGC, 분석 SDK가 없습니다.</p>
-<p>선택형 개발자 팁은 Apple 인앱 구매로 처리되며 개발자는 이름, 이메일, 카드, Apple ID를 받지 않습니다. 거래 ID와 앱 영수증은 복원 또는 검증을 위해 기기에 보관될 수 있습니다. 현재 빌드는 글로벌 후원 보드를 운영하지 않습니다. 향후 켜면 Apple 영수증 검증 후 익명 토큰, 기본 표시 이름, 사용할 수 없는 랭크 점수, 공개/비공개 플래그만 전송합니다.</p>
-<p>현재 빌드는 명확히 표시된 로컬 모의 광고 화면을 사용하며 광고 데이터를 수집하지 않습니다. 향후 실제 광고 SDK를 켜면 EEA/영국/스위스에서 Google UMP를, 실제 교차 앱 추적을 할 때만 Apple ATT를 먼저 제공하고 제출 전에 본 정책과 App 개인정보 보호 답변을 갱신합니다. Game Center는 선택 사항이며 로그인 없이도 플레이할 수 있습니다.</p>
-<p>본 정책은 GitHub Pages에서 호스팅됩니다. GitHub는 자체 개인정보 처리방침에 따라 표준 요청 정보를 처리할 수 있습니다. 게임 데이터는 GitHub로 전송되지 않습니다. 문의: <a href="mailto:chinagdh@163.com">chinagdh@163.com</a>.</p>
+<h3>기기에 저장되는 데이터</h3>
+<p>Drop &amp; Swerve는 싱글 플레이 게임입니다. 이 게임은 iOS 사용자 설정 / Unity PlayerPrefs를 사용하여 언어 선택, 8시간 시계·엔딩·업적 상태, 최고 기록과 해제된 업적, 사운드·진동·튜토리얼 설정, 로컬 후원 포인트와 익명 후원자 ID를 기기에 저장합니다. 아래의 선택 기능을 사용하지 않는 한 이 데이터는 서버로 전송되지 않으며, 앱을 삭제하면 제거됩니다.</p>
+
+<h3>구매 및 후원자 보드</h3>
+<p>선택형 개발자 팁과 "광고 제거"는 Apple 인앱 구매로 처리됩니다. 개발자는 이름, 이메일 주소, 카드 정보 또는 Apple ID를 받지 않습니다. 앱은 구매 제공과 권한 복원을 위해 StoreKit 상품 ID, 거래 ID, 앱 영수증을 받습니다.</p>
+<p>후원을 공개하기로 선택하면 게임은 Apple 영수증 검증 후 <code>vsoho.work</code>의 후원자 API로 익명 후원자 토큰, 서버 생성 표시 이름, 사용할 수 없는 순위 포인트, 공개/비공개 플래그를 전송합니다. 서버는 거래 ID, 상품 ID, 포인트, Apple 환경(Production 또는 Sandbox), 타임스탬프, 공개 표시 이름을 저장하며 Apple ID, 이메일, 카드 정보, 기기 ID, 원본 영수증은 저장하지 않습니다. 공개 보드에는 공개를 선택한 표시 이름과 포인트만 표시됩니다.</p>
+
+<h3>광고 및 동의</h3>
+<p>이 게임은 Google AdMob과 Google User Messaging Platform(UMP)을 사용하여 광고를 표시하고 필요한 지역에서 동의를 수집합니다. 광고 SDK는 기기 또는 광고 식별자, IP 주소에서 추정한 대략적 위치, 광고 요청·노출·클릭, 관련 앱 이벤트와 진단 정보를 광고 제공, 측정, 빈도 제한, 부정 방지, 안정성을 위해 처리할 수 있습니다. 이 데이터는 Google 및 측정 파트너의 정책에 따라 공유될 수 있습니다.</p>
+<p>광고는 한 판의 결과 또는 엔딩 완료 후에만 표시되며, 실패 화면에서 선택형 리워드 동영상을 제공할 수 있습니다. 시청하지 않아도 플레이는 계속됩니다. 필요한 지역에서는 일시정지 메뉴의 "개인정보 옵션"에서 동의 선택을 변경할 수 있습니다.</p>
+<p>이 버전은 App Tracking Transparency(ATT) 권한을 요청하지 않으며 광고 식별자를 추적에 사용하지 않습니다. 향후 버전에서 맞춤 광고 또는 ATT를 사용하면 해당 버전을 출시하기 전에 이 정책과 App Store 개인정보 보호 답변을 업데이트합니다.</p>
+
+<h3>제품 분석(Firebase)</h3>
+<p>이 게임에는 Google Firebase Analytics가 포함되어 있습니다. 수집은 기본적으로 꺼져 있습니다. UMP가 "동의 불필요"로 판단하거나, IAB TCF Purpose 1이 설정된 동의를 받은 경우에만 켜집니다. 거부되었거나 알 수 없는 경우 분석은 꺼진 상태로 유지됩니다.</p>
+<p>이벤트에는 게임 시작과 플레이, 튜토리얼 진행, 설정 변경, 충전/드롭/충돌 시점, 장애물 통과와 아슬아슬한 회피, 사망, 배달, 부활 제안과 리워드 광고 결과, 구매와 복원(상품 ID와 결과), 대략적 광고 노출이 포함됩니다. 이벤트 매개변수는 모드, 구역, 주문 번호, 오브젝트 유형, 충전 시간, 이동 거리, 성공/실패 이유, 부활 방식, 게임 내 쿠폰 수 같은 게임플레이 값으로 제한됩니다. 무작위 세션 식별자로 이벤트를 묶지만, 이는 익명 플레이어 계정, 초대 코드, 초대 토큰, 닉네임 또는 광고 식별자가 아닙니다. Apple/Google 계정 정보, 결제 정보, 영수증, 거래 ID, 연락처, 채팅 내용을 Firebase로 전송하지 않습니다. Firebase는 앱 범위 설치 식별자와 운영 진단 정보를 처리할 수 있습니다. "개인정보 옵션"을 변경하면 수집 상태가 즉시 다시 판단됩니다.</p>
+
+<h3>친구, 초대 및 부활권</h3>
+<p>"친구와 보상"은 선택 기능이며 소셜 로그인이 아닙니다. 전화번호, 이메일, 연락처, 소셜 계정을 요구하지 않습니다. 처음 사용할 때 서버에 익명 플레이어 ID를 하나 만들고 초대 코드, 친구 관계, 누가 누구를 초대했는지, 신규 플레이어가 첫 유효 배달을 완료했는지, 일일 친구 도전 상태, 부활권 지급·사용·관리자 취소의 불변 원장을 저장합니다. 같은 익명 ID는 iOS와 Android에서 공유됩니다.</p>
+<p>초대 링크에는 초대 코드와 서명만 포함되며 기기 ID, 계정 토큰, 닉네임, 정확한 위치, 연락처는 포함되지 않습니다. 신규 플레이어가 초대를 수락하고 첫 유효 배달을 완료하면 초대한 사람에게 게임 내 부활권 3장, 신규 플레이어에게 1장이 지급됩니다. 이 일회성 보상은 부정 사용 검토를 조건으로 실제 신규 플레이어 수에 제한 없이 적용됩니다. 일일 친구 도전은 서버 날짜 기준 초대한 사람 최대 3장, 초대받은 사람 1장이며 같은 친구 쌍은 하루에 한 번만 받을 수 있습니다. 부활권은 화폐가 아니며 현금 가치가 없고 교환·양도·거래·판매할 수 없습니다. 플레이를 이어가는 데만 사용됩니다. 부정 사용이 의심되면 수동 검토용 위험 플래그로 보관하며, 공유 IP, 초대 수, 속도만으로 자동 처벌하지 않습니다.</p>
+<p>패널에는 "내 데이터 삭제"가 있습니다. 확인하면 성장 데이터, 친구 관계, 도전 기록, 배달 이벤트, 원장을 삭제하고 순위표 계정을 제거하며, 선택형 공개 후원자 보드 행과 검증된 팁 기록을 삭제하고 로컬 자격 증명을 지웁니다. 부정 방지를 위해 단방향 기기 해시와 관리 감사 기록을 24개월 보관한 뒤 삭제할 수 있습니다. 닉네임, 초대 코드, 친구 관계, 보상 내역, 후원자 행, 점수는 남지 않습니다. "광고 제거" 권한은 취소되지 않습니다.</p>
+
+<h3>무한 순위표</h3>
+<p>무한 순위표는 선택 기능이며 계정이나 소셜 로그인이 필요하지 않습니다. 처음 사용할 때 기기 식별자(iOS는 IDFV), 앱 식별자, 플랫폼의 SHA-256 해시로 익명 순위표 계정을 만듭니다. 서버는 해시, 서버 발급 토큰, 서버 생성 익명 표시 이름, 최고 무한 점수(배달 수, 게이트 수, 거리), 국가 코드, 플랫폼을 저장합니다. 원본 기기 식별자는 전송되거나 저장되지 않습니다. 버전 1.0에서는 표시 이름 편집이 비활성화되어 있으며 생성된 이름은 표시용입니다. 서비스에서 순위표 점수를 삭제할 수 있습니다. 이 순위표는 Game Center와 별개이며 Apple ID가 필요하지 않습니다.</p>
+
+<h3>Game Center</h3>
+<p>iOS에서는 같은 무한 최고 점수를 위한 Game Center 순위표를 선택적으로 표시할 수 있습니다. Game Center 로그인은 선택 사항이며 필수가 아닙니다. 로그인하면 Apple의 GameKit 서비스가 Game Center 계정을 인증하고 제출한 점수를 받습니다. 게임은 Game Center 프로필 정보(플레이어 ID, 표시 이름, 이메일, 연락처, Apple ID 등)를 접근·저장·전송하지 않으며, GameKit에 인증과 최고 점수 보고만 요청합니다. Apple은 점수를 Game Center 계정과 연결하고 Apple의 개인정보 처리방침에 따라 처리합니다. Game Center는 iOS 설정에서 관리할 수 있습니다. 게임의 "내 데이터 삭제"는 Apple이 보유한 데이터를 삭제하지 않습니다.</p>
+
+<h3>이 정책의 호스팅</h3>
+<p>이 정책은 GitHub Pages에서 호스팅됩니다. GitHub는 자체 개인정보 처리방침에 따라 IP 주소, 사용자 에이전트 같은 표준 웹 요청 정보를 처리할 수 있습니다. 게임 데이터는 GitHub로 전송되지 않습니다.</p>
+
+<h3>아동</h3>
+<p>이 게임은 만 13세 미만 아동을 대상으로 하지 않으며 아동의 개인정보를 의도적으로 수집하지 않습니다. 채팅, 자유 게시물, 브라우저가 없습니다. 선택형 순위표는 익명 계정, 짧은 생성 표시 이름, 무한 점수만 저장합니다.</p>
+
+<h3>선택과 삭제</h3>
+<ul>
+<li>구매, Game Center 로그인, 크로스 플랫폼 순위표를 사용하지 않고도 플레이할 수 있습니다.</li>
+<li>언어, 사운드, 진동은 언제든지 변경할 수 있습니다.</li>
+<li>Google UMP가 요구하는 경우 "개인정보 옵션"을 사용할 수 있습니다.</li>
+<li>"친구와 보상 → 내 데이터 삭제"에서 서버 측 플레이어 데이터를 삭제할 수 있습니다. 친구 관계, 초대 귀속, 일일 도전 기록, 배달 이벤트, 부활권 원장, 순위표 계정, 선택형 후원자 보드 행과 팁 기록이 삭제됩니다. 단방향 기기 해시는 부정 방지를 위해 24개월 보관될 수 있습니다. "광고 제거" 권한은 유지됩니다.</li>
+<li>앱을 삭제하면 로컬 데이터가 지워집니다.</li>
+<li>개인정보 문의: <a href="mailto:chinagdh@163.com">chinagdh@163.com</a></li>
+</ul>
+
+<h3>변경</h3>
+<p>게임 또는 서비스 제공자가 변경되면 이 정책을 업데이트하고 페이지 상단의 시행일을 변경할 수 있습니다.</p>
 </main>
 <footer>© 2026 Drop &amp; Swerve / lightingss · <a href="support.html">Support</a> · <a href="https://github.com/lightingss/drop-swerve-legal">GitHub project</a></footer>
 </div></body></html>
